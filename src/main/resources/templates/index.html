@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album UI</title>
+    <style th:inline="css">
+        body {
+            background-color: [(${backgroundColor})];
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Album Catalog</h1>
+
+    <p th:if="${error}" th:text="${error}" style="color: red;"></p>
+
+    <div class="grid">
+        <div class="card" th:each="album : ${albums}">
+            <img th:src="${album.imageUrl}" th:alt="${album.title}" />
+            <h3 th:text="${album.title}">Title</h3>
+            <p th:text="${album.artist}">Artist</p>
+            <p th:text="${'$' + album.price}">$0.00</p>
+        </div>
+    </div>
+</body>
+</html>
