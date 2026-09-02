@@ -32,6 +32,8 @@
 <body>
     <h1>Album Catalog</h1>
 
+    <p>Server IP: </p><span th:text="${ipaddr}"></span>
+
     <p th:if="${error}" th:text="${error}" style="color: red;"></p>
 
     <div class="grid">

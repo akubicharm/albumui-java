@@ -39,6 +39,17 @@ public class AlbumController {
 
         model.addAttribute("albums", albums);
         model.addAttribute("backgroundColor", backgroundColor);
+        model.addAttribute("ipaddr", getIpAddr());
+
         return "index";
+    }
+
+    private String getIpAddr() {
+        try {
+            java.net.InetAddress localHost = java.net.InetAddress.getLocalHost();
+            return localHost.getHostAddress();
+        } catch (java.net.UnknownHostException e) {
+            return "Unknown Host";
+        }
     }
 }
