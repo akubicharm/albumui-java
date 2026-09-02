@@ -97,9 +97,10 @@ podman run --rm --name tomcat -p 8080:8080 tomcat
 
 ### Apache + Tomcat の環境
 
-Apache と Tomcat が双方向で通信できる状態の必要があるので `podman compose` を使って、両方のコンテナが同一の仮想ネットワークに接続して起動する。
+Apache と Tomcat が双方向で通信できる状態の必要があるので `podman compose` を使って、両方のコンテナが同一の仮想ネットワーク(Bridge Network)に接続して起動する。
 
 ```
+podman network create mynet
 podman compose up
 ```
 
