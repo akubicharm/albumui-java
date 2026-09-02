@@ -81,6 +81,7 @@ jws-7.0/tomcat/bin/shutdown.sh
 #### コンテナ環境で実行する場合
 
 Red Hat Container CatalogにJDK25バージョンのJBoss Web Serverが公開されていないので（as of 2026/9/1)、OpenJDKのイメージにJWSをインストールし、アプリケーション配備したコンテナイメージを作成。
+※Tomcatの実行に使う JDK とアプリケーションのJDKのバージョンが違っていると 404 エラーになる
 
 (ベースイメージはRed Hat Hardened Imageを使ってみたかっただけなので、普通の ubi でもOK。アプリのビルド時のJDKの馬ジョンが21 ならばOpenJDK21版のJWSのコンテナイメージが提供されているのでそちらを利用すれば良い）
 
