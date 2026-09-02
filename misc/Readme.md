@@ -28,11 +28,11 @@ mod_proxy_clusterを利用する場合
 - mod_proxy_clusterを使う場合、mod_proxy_balancerモジュールを無効にする
 
 
-mod_proxy_cluster.confでTomcatからのクラスターへの参加リクエストを受け付ける、manager moduleの設定を定義。
+`mod_proxy_cluster.conf` でTomcatからのクラスターへの参加リクエストを受け付ける manager module の設定を定義。
 このデモ環境の設定では、manager moduleは 8090 ポートでリクエストを待つ。リクエストの送信元を許可する設定の　Require ip にマッチしないホストからのリクエストは受け付けないので、ひとまず `all granted` にしている。
 
 
-mod_proxy_cluster設定の詳細は、[Red Hat JBoss Core ServicesのApache HTTPServerコネクターおよび負荷分散ガイド](https://docs.redhat.com/ja/documentation/red_hat_jboss_core_services/2.4.62/html/apache_http_server_connectors_and_load_balancing_guide/index)を参照。
+mod_proxy_cluster 設定の詳細は、[Red Hat JBoss Core ServicesのApache HTTPServerコネクターおよび負荷分散ガイド](https://docs.redhat.com/ja/documentation/red_hat_jboss_core_services/2.4.62/html/apache_http_server_connectors_and_load_balancing_guide/index)を参照。
 
 ### Tomcat
 
