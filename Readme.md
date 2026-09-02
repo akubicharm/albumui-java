@@ -28,7 +28,8 @@ mvn spring-boot:run
 ### 動作確認
 
 `http://localhost:3000` にアクセス
-ポートは `src/main/resources/application.yaml` で定義。
 
-Tomcatにデプロイして利用する方法は、`misc/Readme.md` 参照
+ポートを変更したい場合は、`src/main/resources/application.yaml` を編集
+
+Tomcatにデプロイして利用する方法は、[misc/Readme.md](/misc/Readme.md) 参照
 
