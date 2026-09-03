@@ -25,7 +25,7 @@ mod_proxy_clusterを利用して、App層のTomcatへのロードバランサー
 
 mod_proxy_clusterを利用する場合
 - mod_proxy_clusterは、httpdのコンテナイメージには含まれていないので、別途インストールする
-- mod_proxy_clusterを使う場合、mod_proxy_balancerモジュールを無効にする
+- mod_proxy_clusterを使う場合、mod_proxy_balancerモジュールを無効にする(/etc/httpd/conf.modules.d/00-proxy.conf からエントリを削除)
 
 
 `mod_proxy_cluster.conf` でTomcatからのクラスターへの参加リクエストを受け付ける manager module の設定を定義。
@@ -62,7 +62,9 @@ podman build . -t httpd
 podman run --rm --name apache -p 8080:8080 -p 8090:8090 httpd
 ```
 
-(mod_proxy_clusterを正規の方法でインストールしていないので、Fedora Projectで公開されているmod_proxy_clusterを使っている。。。https://packages.fedoraproject.org/pkgs/mod_proxy_cluster/mod_proxy_cluster/)
+(mod_proxy_clusterを正規の方法でインストールしていないので、Fedora Projectで公開されているmod_proxy_clusterを使っている。。。https://packages.fedoraproject.org/pkgs/mod_proxy_cluster/mod_proxy_cluster/
+
+正しくインストールするならば、`dnf install mod_proxy_cluster`)
 
 ### Tomcat 単体
 
