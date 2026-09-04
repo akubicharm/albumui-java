@@ -1,8 +1,0 @@
-FROM registry.access.redhat.com/ubi10/openjdk-25-runtime:latest
-
-COPY albumui-1.0-SNAPSHOT.war albumui.war
-
-USER 0
-EXPOSE 8080
-
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar albumui.war"]
