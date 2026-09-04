@@ -1,0 +1,7 @@
+FROM registry.redhat.io/rhel10/rhel-bootc:10.2
+
+RUN dnf install -y httpd
+RUN systemctl enable httpd
+COPY httpd_balancer.conf /etc/httpd/conf.d
+
+ADD etc /etc

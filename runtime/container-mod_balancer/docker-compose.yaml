@@ -1,0 +1,32 @@
+services:
+  httpd:
+    container_name: httpd
+    image: httpd:mod_proxy_balancer
+    ports:
+      - "8090:8090"
+      - "8080:8080"
+    networks:
+      - web
+  tomcat1:
+    container_name: tomcat1
+    image: tomcat
+    ports:
+      - "8081:8080"
+    networks:
+      - web
+  tomcat2:
+    container_name: tomcat2
+    image: tomcat
+    ports:
+      - "8082:8080"
+    networks:
+      - web 
+  redis:
+    container_name: redis
+    image: registry.redhat.io/rhel9/redis-7:9.8-1788410640
+    ports:
+      - "6379:6379"
+    networks:
+      - web      
+networks:
+  web:
