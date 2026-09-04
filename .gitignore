@@ -1,4 +1,4 @@
 target/
 **/*.rpm
-**/*.war
+#**/*.war
 **/*.zip
