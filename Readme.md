@@ -27,7 +27,7 @@ mvn spring-boot:run
 
 ### 動作確認
 
-`http://localhost:3000` にアクセス
+`http://localhost:8080` にアクセス
 
 ポートを変更したい場合は、`src/main/resources/application.yaml` を編集
 
