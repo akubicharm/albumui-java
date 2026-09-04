@@ -1,6 +1,18 @@
 server:
   port: 8080
 
+#debug: true
+
 spring:
   thymeleaf:
     cache: false
+  # session:
+  #   store-type: redis
+  #   redis:
+  #     repository-type: default
+  # data:
+  #   redis:
+  #     host: redis
+  #     port: 6379
+
+  # spring.data.redis.host が認識されないので Config クラスで設定

@@ -1,4 +1,4 @@
-# Apach + Tomcat の連携　（コンテナ）
+# Apach　Http Server + Tomcat の連携　（コンテナ）
 
 コンテナイメージは[Red Hat Ecosystem Catalog](https://catalog.redhat.com/en/search?searchType=Containers) で公開されているものを利用。
 
@@ -78,7 +78,7 @@ podman run --rm --name httpd -p 8080:8080 -p 8090:8090 httpd
 
 JBoss Web Server を[Red Hat Customer Portal](https://access.redhat.com/downloads/content/application-services/core.service.apachehttp) からダウンロード。
 
-`conf/server.xml` を [./tomcat/server.xml](./tomcat/server.xml) に置き換える。
+`conf/server.xml` を jws/server.xml に置き換える。
 
 - 起動と停止
 ```sh

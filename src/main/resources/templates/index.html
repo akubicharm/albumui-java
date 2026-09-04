@@ -30,9 +30,17 @@
     </style>
 </head>
 <body>
-    <h1>Album Catalog</h1>
+    <p>Server IP: <span th:text="${ipaddr}"></span> </p>
 
-    <p>Server IP: </p><span th:text="${ipaddr}"></span>
+    <form action="#" th:action="@{/logout}" method="post">
+      <p>
+      <input type="submit" value="Logout" />
+      </p>
+    </form>
+    
+    <p>こんにちは <span th:text="${user.name}"></span> さん！</p>    
+
+    <h1>Album Catalog</h1>
 
     <p th:if="${error}" th:text="${error}" style="color: red;"></p>
 

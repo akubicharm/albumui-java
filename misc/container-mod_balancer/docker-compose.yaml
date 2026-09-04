@@ -21,5 +21,12 @@ services:
       - "8082:8080"
     networks:
       - web 
+  redis:
+    container_name: redis
+    image: registry.redhat.io/rhel9/redis-7:9.8-1788410640
+    ports:
+      - "6379:6379"
+    networks:
+      - web      
 networks:
   web:
