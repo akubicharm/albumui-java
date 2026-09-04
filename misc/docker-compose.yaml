@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   apache:
-    image: apache_mod_proxy 
+    image: httpd:balancer 
     ports:
       - "8090:8090"
       - "8080:8080"
