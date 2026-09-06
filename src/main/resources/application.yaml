@@ -5,6 +5,7 @@ server:
 
 redis_hostname: ${REDIS_HOST_NAME:localhost}
 background_color: ${APP_BACKGROUND_COLOR:}
+api_base_url: ${API_BASE_URL:}
 spring:
   thymeleaf:
     cache: false
