@@ -3,6 +3,7 @@ server:
 
 #debug: true
 
+redis_hostname: ${REDIS_HOST_NAME:localhost}
 spring:
   thymeleaf:
     cache: false

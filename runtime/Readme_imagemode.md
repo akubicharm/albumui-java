@@ -49,3 +49,9 @@ virsh shutdown bootc-vm
 virsh destroy bootc-vm
 virsh undefine bootc-vm --remove-all-storage
 ```
+
+
+## アプリケーション
+
+Albumui アプリケーションは、HttpSession の永続化にRedisを利用しているので、環境変数 `REDIS_HOST_NAME` に、Redisのホスト名を設定する。
+デフォルトでは　localhost に接続する。
