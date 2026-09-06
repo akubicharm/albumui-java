@@ -1,0 +1,14 @@
+#
+# For running albumui web app locally.
+#
+services:
+  redis:
+    container_name: redis
+    image: registry.redhat.io/rhel9/redis-7:9.8-1788410640
+    ports:
+      - "6379:6379"
+#  sonarqube:
+#    container_name: sonarqube
+#    image: sonarqube
+#    ports:
+#    - "9000:9000"
