@@ -19,10 +19,10 @@ public class AlbumController {
 
     private final RestClient restClient = RestClient.create();
 
-    @Value("${API_BASE_URL:}")
+    @Value("${api_base_url:}")
     private String apiBaseUrl;
 
-    @Value("${BACKGROUND_COLOR:#ffffff}")
+    @Value("${background_color:#ffffff}")
     private String backgroundColor;
 
     @GetMapping("/")
@@ -45,15 +45,12 @@ public class AlbumController {
             }
         }
     
-        String ipaddr = getIpAddr();
-
         String name = (String)session.getAttribute("user");
         User user = new User();
         user.setName(name);
 
         model.addAttribute("albums", albums);
         model.addAttribute("backgroundColor", backgroundColor);
-        model.addAttribute("ipaddr", ipaddr);
         model.addAttribute("user", user);
 
         return "index";

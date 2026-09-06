@@ -25,6 +25,7 @@ services:
       - web 
     environment:
       - REDIS_HOST_NAME=redis
+      - APP_BACKGROUND_COLOR=#aaaaaa
   redis:
     container_name: redis
     image: registry.redhat.io/rhel9/redis-7:9.8-1788410640

@@ -4,6 +4,7 @@ server:
 #debug: true
 
 redis_hostname: ${REDIS_HOST_NAME:localhost}
+background_color: ${APP_BACKGROUND_COLOR:}
 spring:
   thymeleaf:
     cache: false
