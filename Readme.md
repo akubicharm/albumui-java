@@ -22,6 +22,7 @@ mvn package
 ### 実行
 
 ```sh
+podman compose up
 mvn spring-boot:run
 ```
 
